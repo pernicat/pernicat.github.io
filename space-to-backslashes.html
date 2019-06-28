@@ -5,12 +5,13 @@
     <title>Converts spaces to '//'</title>
   </head>
   <body>
-	<input type="text" id="text">
+	<textarea rows=24 cols=80 id="text"></textarea>
+	<br>
 	<button id="convert">Convert</button>
 	<script>
 		const text = document.getElementById("text");
 		const convert = document.getElementById("convert");
-		const re = /\s+/;
+		const re = /\s+/g;
 
 		convert.addEventListener('click', () => text.value = text.value.replace(re, '//'));
 
